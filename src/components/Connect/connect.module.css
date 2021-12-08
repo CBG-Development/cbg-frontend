@@ -1,0 +1,30 @@
+.connectContainer {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+.connect {
+    text-align: center;
+}
+.connect img {
+    width: 300px;
+}
+
+.inputContainer > input {
+    width: 240px;
+    font-size: 1.4em;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    color: white;
+}
+.inputContainer > label {
+    font-size: 1.2em;
+    color: white;
+}
+.inputActive {
+    transform: scale(.9) translateY(-25px);
+    transition: cubic-bezier(0.5);
+    color: rgb(156, 156, 156);
+}

@@ -1,0 +1,60 @@
+app-login {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-content: center;
+}
+
+app-login-menu {
+    width: 400px;
+    height: max-content;
+    padding: 1em;
+    background-color: white;
+    display: grid;
+    justify-items: center;
+    margin: auto;
+    border-radius: .25em;
+}
+app-login-menu > p {
+    color: black;
+    text-align: center;
+    font-size: 1.2em;
+}
+app-login-menu > .logo {
+    width: 100%;
+    max-width: 300px;
+    padding: 1em;
+}
+.errorMessage {
+    color: red;
+}
+
+app-divider {
+    width: 400px;
+    margin: 1.5em 0;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 1.2em;
+}
+app-divider::before, app-divider::after {
+    content: "";
+    height: 1px;
+    background-color: #fff;
+    flex: 1;
+}
+app-divider > span {
+    padding: 0 1em;
+}
+
+app-register-menu {
+    width: 400px;
+    height: max-content;
+    display: flex;
+    border-radius: .25em;
+    overflow: hidden;
+}
+app-register-menu > input-button {
+    background-color: rgb(0, 72, 167);
+}

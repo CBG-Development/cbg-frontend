@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("./assets/RobotoCondensed.ttf") format("truetype");
+    font-display: auto;
+}
+@font-face {
+    font-family: "Maven Pro";
+    src: url("./assets/MavenPro.ttf") format("truetype");
+    font-display: auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Roboto Condensed";
+}
+
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #242121;
+}
+
+a, p {
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 2em;
+    color: rgb(214, 188, 88);
+    margin: 0.5em 0;
+}
+h2 {
+    font-size: 1.5em;
+    color: rgb(24, 101, 112);
+    margin: 0.5em 0;
+}
+p {
+    margin: 0.5em 0;
+}
+
+ul, ol {
+    padding-left: 0;
+}
+
+img {
+    height: auto;
+}
+
+app-root {
+    display: flex;
+}
+content {
+    width: 88vw;
+    height: 100vh;
+    padding: 0 1.5em;
+}

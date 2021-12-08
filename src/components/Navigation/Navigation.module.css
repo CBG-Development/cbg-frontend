@@ -1,0 +1,67 @@
+app-navigation {
+    width: 12vw;
+    height: 100vh;
+    display: block;
+    background-color: #38a5ff;
+    box-shadow: 0 4px 24px black;
+    z-index: 999;
+}
+
+app-navigation > a {
+    width: 12vw;
+    display: block;
+    background-color: white;
+}
+.logo {
+    width: 12vw;
+    padding: 1em;
+}
+
+nav {
+    margin-top: 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    letter-spacing: .05em;
+}
+nav > ul {
+    margin-top: 1em;
+}
+nav > .login {
+    margin-top: 0;
+    font-weight: normal;
+}
+nav > .login > li:first-child {
+    padding: .5em;
+    background-color: #05508f;
+}
+
+.userProfile > img {
+    width: 126px;
+    border-radius: 100%;
+    border: 3px solid #97bf0d;
+}
+.userProfile > p {
+    font-size: .8em;
+}
+.userProfile > p > span {
+    font-weight: bold;
+    color: #97bf0d;
+    font-size: 1.4em;
+}
+.navList {
+    color: white;
+    padding: 6px;
+}
+.navList:first-child {
+    display: flex;
+    background-color: #58585a;
+    margin-top: 0;
+    justify-content: center;
+    align-content: center;
+    list-style: none;
+}
+.navList:first-child > li {
+    margin: 0 .25em;
+}
