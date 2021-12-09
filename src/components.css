@@ -9,16 +9,18 @@ h2 {
     display: grid;
 }
 
-a.button {
+.button {
     width: max-content;
     border-radius: .5em;
     padding: 8px 12px;
     margin: .6em;
     background-color: #2474b6;
     font-size: 1.2em;
+    border: none;
 }
-a.button:hover {
+.button:hover {
     filter: brightness(.85);
+    cursor: pointer;
 }
 
 ul.form {

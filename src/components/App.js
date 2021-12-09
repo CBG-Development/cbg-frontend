@@ -4,19 +4,18 @@ import Navigation from "./Navigation/Navigation";
 import Login from "./Login/Login";
 import Settings from "./Settings/Settings";
 import {BrowserRouter, Route, Switch, Redirect} from "react-router-dom";
-import { LoLConnect, LoLDisconnect } from './Connect/lol';
-import jwt from 'jsonwebtoken';
+import { LoLConnect, LoLDisconnect, LoLUpdate } from './Connect/lol';
 import { CircularProgress } from "react-cssfx-loading";
+import GetUser from './User';
 
 export default function App() {
 
-    const [userData, setUserData] = useState(null);
+    const [userData] = GetUser();
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        if (localStorage.getItem('player') !== undefined) setUserData(jwt.decode(localStorage.getItem('player')))
-        setLoaded(true);
-    }, [])
+        if (userData) setLoaded(true);
+    }, [userData])
 
     return (
         <>
@@ -32,8 +31,8 @@ export default function App() {
                             <>
                                 <Navigation />
 
-                                { userData ? (
-                                    <content>
+                                { userData?.uid ? (
+                                    <main>
                                         <Switch>
                                                 <Route exact path={'/settings'}>
                                                     <Settings />
@@ -44,8 +43,11 @@ export default function App() {
                                                 <Route exact path={'/disconnect/lol'}>
                                                     <LoLDisconnect />
                                                 </Route>
+                                                <Route path={'/update/lol'}>
+                                                    <LoLUpdate />
+                                                </Route>
                                         </Switch>
-                                    </content>
+                                    </main>
                                 ) : null }
                             </>
                         </Route>

@@ -54,7 +54,7 @@ img {
 app-root {
     display: flex;
 }
-content {
+main {
     width: 88vw;
     height: 100vh;
     padding: 0 1.5em;

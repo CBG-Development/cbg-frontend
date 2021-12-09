@@ -1,19 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styles from './Navigation.module.css'
 import logo from '../../assets/logo.png'
 import {Link} from "react-router-dom";
-import jwt from 'jsonwebtoken';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import GetUser from '../User';
 
 const Navigation = () => {
 
-    const [userData, setUserData] = useState(null);
-
-    useEffect(() => {
-        const decode = jwt.decode(localStorage.getItem('player'));
-        if (decode !== null) setUserData(decode);
-    }, [])
+    const [userData] = GetUser();
 
     const logout = (event) => {
         localStorage.removeItem('player');
