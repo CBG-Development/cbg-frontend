@@ -14,7 +14,7 @@ export default function App() {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        if (userData) setLoaded(true);
+        setLoaded(true);
     }, [userData])
 
     return (
